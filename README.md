@@ -76,18 +76,7 @@ npm install
 
 ### 3. Configurează variabilele de mediu
 
-Creează un fișier `.env` în rădăcina proiectului:
-
-```env
-# JWT Configuration
-JWT_SECRET=your_super_secret_key_here_at_least_32_characters
-JWT_EXPIRES_IN=1d
-
-# Database (Neon PostgreSQL)
-DATABASE_URL="postgresql://username:password@host/database?sslmode=require"
-```
-
-**Obține DATABASE_URL gratuit de pe [Neon](https://neon.tech/)** (vezi [NEON_SETUP.md](NEON_SETUP.md))
+Creează un fișier `.env` bazat pe `.env.example` și completează cu datele tale.
 
 ### 4. Configurează baza de date
 
@@ -115,47 +104,6 @@ npm run dev
 npm start
 ```
 
-Aplicația va fi disponibilă la: **http://localhost:3000**
-
----
-
-## 🌐 Deployment pe Vercel
-
-Aplicația este pregătită pentru deployment instant pe Vercel!
-
-### Quick Deploy
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone)
-
-### Manual Deploy
-
-1. **Push pe GitHub**
-   ```bash
-   git add .
-   git commit -m "Ready for deployment"
-   git push origin main
-   ```
-
-2. **Conectează cu Vercel**
-   - Mergi pe [vercel.com](https://vercel.com/)
-   - Importă repository-ul GitHub
-   - Vercel va detecta automat setările
-
-3. **Configurează Environment Variables**
-
-   În Vercel Dashboard → Settings → Environment Variables:
-   ```env
-   DATABASE_URL=postgresql://...  (de pe Neon)
-   JWT_SECRET=your_secret_key
-   JWT_EXPIRES_IN=1d
-   ```
-
-4. **Deploy!** 🚀
-
-Pentru ghid detaliat, vezi [NEON_SETUP.md](NEON_SETUP.md)
-
----
-
 ## 🛣️ Rute Principale
 
 - `/` - Pagina principală (redirect la `/events`)
@@ -167,37 +115,4 @@ Pentru ghid detaliat, vezi [NEON_SETUP.md](NEON_SETUP.md)
 
 ---
 
-## 🔐 Variabile de Mediu
-
-Creează un fișier `.env` cu următoarele variabile:
-
-| Variabilă | Descriere | Exemplu |
-|-----------|-----------|---------|
-| `DATABASE_URL` | Connection string PostgreSQL | `postgresql://user:pass@host/db` |
-| `JWT_SECRET` | Secret key pentru JWT (min 32 caractere) | `a0d4c6f1e2b94fb985d7...` |
-| `JWT_EXPIRES_IN` | Durata de viață a token-ului JWT | `1d`, `7d`, `24h` |
-
-**⚠️ IMPORTANT**: Nu comite fișierul `.env` în Git! Este deja în `.gitignore`.
-
-
----
-
-## 📚 Documentație Suplimentară
-
-- **[NEON_SETUP.md](NEON_SETUP.md)** - Ghid deployment cu Neon + Vercel
-- **[DEPLOYMENT.md](DEPLOYMENT.md)** - Alternative deployment
-
----
-
-## 👤 Autor
-
-**Isac Jasmina** - Universitatea de Stat din Moldova (USM)
-Anul III, Semestrul I - Curs Node.js, Laborator 4
-
----
-
-<div align="center">
-
-Made with ❤️ using Node.js, Express & PostgreSQL
-
-</div>
+Poți vizualiza un demo [aici](https://local-events.vercel.app/)
