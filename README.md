@@ -115,4 +115,4 @@ npm start
 
 ---
 
-Poți vizualiza un demo [aici](https://local-events.vercel.app/)
+Poți vizualiza un demo [aici](https://local-events-inky.vercel.app)
